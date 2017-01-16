@@ -1,5 +1,5 @@
 # nrpe_Solaris
-nrpe for Solaris
+nrpe for Solaris - this is part of a project I'm working at my current Job
 ===============================
 
 Copy and installs NRPE agent and custom plugins for Solaris 10/11
