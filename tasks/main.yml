@@ -1,0 +1,14 @@
+---
+- name: Install NRPE
+  copy: src={{ item }} dest={{ nagios_path }} owner=nagios group=nagios mode=0755
+  with_items:
+  - nagios
+- name: Setup Custom script dir
+  file: dest=/opt/nagios state=directory owner=nagios group=nagios mode=0755
+- name: Copy custom scripts
+  copy: src={{ item }} dest={{ custom_plugin_path }} owner=nagios group=nagios mode=0755
+  with_items:
+  - libexec
+- name: Install nrpe.cfg
+  template: src=nrpe.cfg.j2 dest=/opt/nagios/etc/nrpe.cfg owner=nagios group=nagios mode=0644
+  notify: restart nrpe
