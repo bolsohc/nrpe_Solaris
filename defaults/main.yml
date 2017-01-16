@@ -1,0 +1,8 @@
+---
+nrpe_port: 5666
+nrpe_user: "nagios"
+nrpe_group: "nagios"
+nrpe_allowed_hosts: ""
+nrpe_plugin_path: /opt/nagios/bin
+custom_plugin_path: /opt/nagios
+nagios_path: /opt
