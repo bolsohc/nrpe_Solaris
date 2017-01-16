@@ -132,3 +132,17 @@ connection_timeout=300
 # to match the argument format the plugins expect.  Remember, these are
 # examples only!
 # The following examples use hardcoded command arguments...
+
+
+command[check_root_disk]={{ custom_plugin_path }}/check_disk -w 20% -c 10% -p /
+command[check_usr_disk]={{ custom_plugin_path }}/check_disk -w 20% -c 10% -p /usr
+command[check_var_disk]={{ custom_plugin_path }}/check_disk -w 20% -c 10% -p /var
+command[check_opt_disk]={{ custom_plugin_path }}/check_disk -w 20% -c 10% -p /opt
+command[check_export_disk]={{ custom_plugin_path }}/check_disk -w 20% -c 10% -p /export
+command[check_swap]={{ custom_plugin_path }}/check_swap -w 20% -c 10%
+command[check_metastat]={{ custom_plugin_path }}/check_metastat.sh
+command[check_ifstatus]={{ custom_plugin_path }}/check_nics.ksh
+command[check_processes]={{ custom_plugin_path }}/check_processes.sh
+command[check_processor]={{ custom_plugin_path }}/check_processor.sh
+command[check_nfs]={{ custom_plugin_path }}}/check_nfs_client.sh
+command[check_load]={{ custom_plugin_path }}/check_load -w 2,2,2 -c 3,3,3
